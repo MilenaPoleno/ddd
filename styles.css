@@ -85,6 +85,11 @@ section.about {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
 }
 
 .product img {
@@ -130,6 +135,11 @@ section.about {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
     margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.cart-item:hover {
+    transform: translateY(-5px);
 }
 
 .cart-item img {
@@ -156,7 +166,7 @@ section.about {
 }
 
 .cart-item .quantity-control button {
-    background-color: #8fbc8f; /* Muted green */
+    background-color: #8fbc8f; /* Muted green*/
     color: #ffffff;
     border: none;
     padding: 5px 10px;
@@ -201,9 +211,36 @@ section.about {
 }
 
 /* Footer */
-footer {
-    background-color: #8fbc8f;
-    color: #ffffff;
+.footer {
+    background-color: #394f3d;
+    padding: 20px;
     text-align: center;
-    padding: 10px 0;
-}
+  }
+  
+  .footer p {
+    font-size: 14px;
+    color: #d4e3c6;
+  }
+  
+  .footer a {
+    color: #d4e3c6;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color: #a8c5a1;
+  }
+  
+  .footer .social-icons {
+    margin-top: 10px;
+  }
+  
+  .footer .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #d4e3c6;
+  }
+  
+  .footer .social-icons a:hover {
+    color: #a8c5a1;
+  }

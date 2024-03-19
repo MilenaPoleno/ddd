@@ -92,10 +92,16 @@ section.about {
     transform: translateY(-5px);
 }
 
-.product img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+.product-image {
+    width: 200px; /* Устанавливаем ширину контейнера */
+    height: 200px; /* Устанавливаем высоту контейнера */
+    overflow: hidden; /* Скрываем выходящую за пределы часть изображения */
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Масштабируем изображение, чтобы оно заполнило контейнер */
 }
 
 .product h5 {
@@ -123,8 +129,10 @@ section.about {
 }
 
 /* Cart */
-.cart-container {
-    margin-bottom: 20px;
+.cart-container a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .cart-item {
@@ -210,37 +218,26 @@ section.about {
     background-color: #3d5f3d; /* Dark green */
 }
 
+.cart-count {
+    background-color: #3d5f3d;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.cart-total {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
 /* Footer */
-.footer {
-    background-color: #394f3d;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .footer p {
-    font-size: 14px;
-    color: #d4e3c6;
-  }
-  
-  .footer a {
-    color: #d4e3c6;
+.footer-widget a {
+    color: #8fbc8f; /* Цвет ссылок */
     text-decoration: none;
-  }
-  
-  .footer a:hover {
-    color: #a8c5a1;
-  }
-  
-  .footer .social-icons {
-    margin-top: 10px;
-  }
-  
-  .footer .social-icons a {
-    display: inline-block;
-    margin-right: 10px;
-    color: #d4e3c6;
-  }
-  
-  .footer .social-icons a:hover {
-    color: #a8c5a1;
-  }
+    transition: color 0.3s;
+}
+
+.footer-widget a:hover {
+    color: #f8f4e6; /* Цвет ссылок при наведении */
+}

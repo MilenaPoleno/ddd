@@ -3,34 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Simple Online Store</title>
+    <title>Контакты - ШТУЧКИ</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Simple Online Store</h1>
+        <h1>ШТУЧКИ</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="catalog.html">Catalog</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="delivery_payment.html">Delivery & Payment</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="cart.html">Корзина <span class="cart-count">0</span></a></li>
+                <li><a href="delivery_payment.html">Доставка и оплата</a></li>
+                <li><a href="contact.html">Контакты</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h2>Contact Us</h2>
-        <section class="contact-info">
-            <p>Если у вас возникли вопросы или вам нужна помощь с выбором товара, не стесняйтесь связаться с нами. Мы всегда рады помочь вам создать прекрасный и уютный дом!</p>
+        <div class="container">
+            <h2>Контакты</h2>
+            <p>Для связи с нами воспользуйтесь одним из следующих способов:</p>
             <ul>
-                <li>Email: info@shtuchkistore.com</li>
-                <li>Phone: +7 812 123 45 67</li>
-                <li>Address: Nevsky Prospect, Saint Petersburg, Russia</li>
+                <li>Электронная почта: info@shtuchki.ru</li>
+                <li>Телефон: +7 (812) 123-45-67</li>
+                <li>Адрес: г. Санкт-Петербург, Невский пр. д.1, офис 777</li>
             </ul>
-        </section>
+            <h3>Обратная связь</h3>
+            <form>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
         <section class="map">
-            <h3>Our Location</h3>
+            <h3>Мы находимся</h3>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.606063425586!2d30.32085871608065!3d59.938951669048454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310f73f63f43%3A0xd1b9127e8aa1c4ff!2sNevsky%20Prospect%2C%20St%20Petersburg%2C%20Russia!5e0!3m2!1sen!2sus!4v1632843938248!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
     </main>

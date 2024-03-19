@@ -14,7 +14,7 @@
                 <ul>
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="catalog.html">Каталог</a></li>
-                    <li><a href="cart.html">Корзина</a></li>
+                    <li><a href="cart.html">Корзина <span class="cart-count">0</span></a></li>
                     <li><a href="delivery_payment.html">Доставка и оплата</a></li>
                     <li><a href="contact.html">Контакты</a></li>
                 </ul>
@@ -22,14 +22,20 @@
         </div>
     </header>
     <main>
-        <div class="container">
+        <div class="cart-container">
             <h2>Ваша корзина</h2>
-            <div class="cart-container">
-                <!-- Товары в корзине будут добавлены динамически с помощью JavaScript -->
+            <ul class="cart-list">
+                <!-- Товары из корзины будут добавлены здесь -->
+            </ul>
+            <div class="cart-total">
+              <span>Итого:</span>
+              <span class="total-price">0</span>
             </div>
-            <div class="checkout">
-                <button class="checkout-btn">Оформить заказ</button>
-            </div>
+            <button class="checkout-btn"><a href="delivery_payment.html">Оформить заказ</a></button>
+            <script>
+                const checkoutBtn = document.querySelector('.checkout-btn');
+                checkoutBtn.addEventListener('click', placeOrder);
+            </script>
         </div>
     </main>
     <footer class="site-footer">
@@ -91,5 +97,9 @@
         </div> <!-- /.bottom-footer -->
     </footer> <!-- /.site-footer -->
     <script src="script.js"></script>
+    <script>
+        // Вызываем функцию loadCartFromLocalStorage при загрузке страницы cart.html
+        window.addEventListener('load', loadCartFromLocalStorage);
+    </script>
 </body>
 </html>
